@@ -1,0 +1,23 @@
+# Secrets for the trello-workflow skill, loaded by direnv.
+# Never commit this file: add .envrc to .gitignore.
+#
+# Tip: put these in one parent folder's .envrc (e.g. ~/Work/.envrc) and add
+# `source_up` to each project's .envrc, so every project shares the tokens.
+
+# Trello: https://trello.com/power-ups/admin -> New -> API key, then use the "Token" link
+# next to the key to generate a token (read + write). See the README for the steps.
+export TRELLO_API_KEY=""
+export TRELLO_API_TOKEN=""
+
+# Bitbucket Cloud API token (scopes: read:user, read:repository, read:pullrequest, read:pipeline)
+# Create one at https://id.atlassian.com/manage-profile/security/api-tokens -> "Create API token with scopes" -> Bitbucket
+export BITBUCKET_EMAIL="you@company.com"
+export BITBUCKET_API_TOKEN=""
+# Or a repository/workspace access token instead of the two lines above:
+# export BITBUCKET_ACCESS_TOKEN=""
+
+# Optional: read tokens from 1Password instead of plain text
+# export TRELLO_API_TOKEN="$(op read 'op://Private/Trello token/password')"
+
+# Optional: point to a workspace file somewhere else
+# export TRELLO_WORKSPACE_FILE="$PWD/.trello-workspace.json"

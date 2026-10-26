@@ -1,0 +1,26 @@
+{
+  "trello": {
+    "board": "https://trello.com/b/AbCd1234/my-board",
+    "lists": {
+      "todo": "To Do",
+      "doing": "Doing",
+      "review": "Review",
+      "done": "Done"
+    }
+  },
+  "bitbucket": {
+    "workspace": "your-company",
+    "repos": ["mobile-app"],
+    "defaultRepo": "mobile-app"
+  },
+  "worklog": {
+    "requireComment": true,
+    "dailyTargetHours": 8,
+    "customField": ""
+  },
+  "conventions": {
+    "branch": "feature/{number}-{short-summary}",
+    "commit": "#{number} {message}",
+    "newCardList": "todo"
+  }
+}
