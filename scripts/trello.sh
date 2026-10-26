@@ -34,7 +34,8 @@ usage() { awk 'NR > 1 && /^#/ { sub(/^# ?/, ""); print; next } NR > 1 { exit }' 
 TIME_MARK="⏱ Logged"
 
 cmd="${1:-}"; [[ -n "$cmd" ]] || usage; shift
-B="$(board_id)"
+# whoami and boards work before a board is configured (they are how you find it).
+case "$cmd" in whoami|boards|my-cards) B="" ;; *) B="$(board_id)" ;; esac
 
 card_fields="name,desc,idList,idMembers,labels,due,dueComplete,shortLink,idShort,url,dateLastActivity,closed"
 
